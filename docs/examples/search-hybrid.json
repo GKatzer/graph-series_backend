@@ -1,0 +1,62 @@
+{
+  "_request": "GET /api/search?q=breaking%20bad&mode=hybrid&limit=3",
+  "_http": 200,
+  "response": {
+    "query": "breaking bad",
+    "mode": "hybrid",
+    "results": [
+      {
+        "tmdb_id": 72812,
+        "name": "Metástasis",
+        "start_year": 2014,
+        "end_year": 2014,
+        "episode_count": 62,
+        "season_count": 5,
+        "overview": "A Colombian remake of the U.S. TV show Breaking Bad. After he is diagnosed with cancer, Walter Blanco teams up…",
+        "poster_path": "/pZh2WhyOwvqmfLHs9U6sxfSJTNB.jpg",
+        "vote_average": 7.0,
+        "vote_count": 99,
+        "popularity": 8.3992,
+        "score": 0.9721290588378906,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 1396,
+        "name": "Breaking Bad",
+        "start_year": 2008,
+        "end_year": 2013,
+        "episode_count": 62,
+        "season_count": 5,
+        "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only…",
+        "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+        "vote_average": 8.952,
+        "vote_count": 18665,
+        "popularity": 227.4384,
+        "score": 0.7958984375,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 21394,
+        "name": "Breaking Away",
+        "start_year": 1980,
+        "end_year": 1981,
+        "episode_count": 8,
+        "season_count": 1,
+        "overview": "Breaking Away is a 1980 American comedy-drama television series that was based on the 1979 film of the same na…",
+        "poster_path": "/2JRJVesVyy5PG0cxTaqfPFER5jv.jpg",
+        "vote_average": 7.0,
+        "vote_count": 3,
+        "popularity": 4.1373,
+        "score": 0.7869316101074219,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      }
+    ],
+    "total": 3
+  }
+}

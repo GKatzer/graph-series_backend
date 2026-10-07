@@ -1,0 +1,85 @@
+{
+  "_request": "GET /api/series/1396",
+  "_http": 200,
+  "response": {
+    "tmdb_id": 1396,
+    "name": "Breaking Bad",
+    "original_name": "Breaking Bad",
+    "imdb_id": "tt0903747",
+    "wikidata_id": "Q1079",
+    "tvdb_id": 81189,
+    "start_year": 2008,
+    "end_year": 2013,
+    "status": "Ended",
+    "type": "Scripted",
+    "in_production": false,
+    "original_language": "en",
+    "season_count": 5,
+    "episode_count": 62,
+    "episode_runtime": 56.0,
+    "popularity": 227.4384,
+    "vote_average": 8.952,
+    "vote_count": 18665,
+    "us_content_rating": "TV-MA",
+    "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only…",
+    "tagline": "Change the equation.",
+    "homepage": "https://www.sonypictures.com/tv/breakingbad",
+    "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "keywords": [
+      "drug dealer",
+      "criminal",
+      "cartel",
+      "cancer",
+      {
+        "…": "25 more"
+      }
+    ],
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en",
+      "es",
+      "de"
+    ],
+    "networks": [
+      {
+        "name": "AMC",
+        "country": "US",
+        "network_id": 174
+      }
+    ],
+    "cast_count": 20,
+    "creators": [
+      {
+        "name": "Vince Gilligan",
+        "person_id": 66633
+      }
+    ],
+    "directors": [
+      {
+        "name": "Vince Gilligan",
+        "person_id": 66633
+      },
+      {
+        "name": "Terry McDonough",
+        "person_id": 1193575
+      },
+      {
+        "name": "Bryan Cranston",
+        "person_id": 17419
+      },
+      {
+        "name": "Scott Winant",
+        "person_id": 1214396
+      },
+      {
+        "…": "6 more"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_request": "GET /api/search?q=space%20western&mode=semantic&limit=3",
+  "_http": 200,
+  "response": {
+    "query": "space western",
+    "mode": "semantic",
+    "results": [
+      {
+        "tmdb_id": 30991,
+        "name": "Cowboy Bebop",
+        "start_year": 1998,
+        "end_year": 1999,
+        "episode_count": 26,
+        "season_count": 1,
+        "overview": "In 2071, roughly fifty years after an accident with a hyperspace gateway made the Earth almost uninhabitable, …",
+        "poster_path": "/xDiXDfZwC6XYC6fxHI1jl3A3Ill.jpg",
+        "vote_average": 8.5,
+        "vote_count": 2026,
+        "popularity": 38.3139,
+        "score": 0.7173728942871094,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 82856,
+        "name": "The Mandalorian",
+        "start_year": 2019,
+        "end_year": 2023,
+        "episode_count": 24,
+        "season_count": 3,
+        "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes h…",
+        "poster_path": "/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+        "vote_average": 8.402,
+        "vote_count": 11250,
+        "popularity": 59.157,
+        "score": 0.7039527893066406,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 5172,
+        "name": "BraveStarr",
+        "start_year": 1987,
+        "end_year": 1988,
+        "episode_count": 65,
+        "season_count": 1,
+        "overview": "On the planet New Texas, people live in futuristic conditions reminiscent of the Wild West. Here, Marshall Bra…",
+        "poster_path": "/zNDqyAhOFNplKQNbTqYshdj5tpX.jpg",
+        "vote_average": 8.106,
+        "vote_count": 156,
+        "popularity": 29.5272,
+        "score": 0.7023429870605469,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      }
+    ],
+    "total": 3
+  }
+}

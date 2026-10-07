@@ -1,0 +1,57 @@
+{
+  "_request": "GET /api/graph/series/1396?depth=1",
+  "_http": 200,
+  "response": {
+    "nodes": [
+      {
+        "id": "series:1396",
+        "key": 1396,
+        "label": "Series",
+        "name": "Breaking Bad",
+        "properties": {
+          "start_year": 2008,
+          "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+          "vote_average": 8.952,
+          "popularity": 227.4384
+        }
+      },
+      {
+        "id": "person:209674",
+        "key": 209674,
+        "label": "Person",
+        "name": "RJ Mitte",
+        "properties": {}
+      },
+      {
+        "id": "person:115688",
+        "key": 115688,
+        "label": "Person",
+        "name": "Carmen Serano",
+        "properties": {}
+      },
+      {
+        "…": "63 more"
+      }
+    ],
+    "edges": [
+      {
+        "source": "person:209674",
+        "target": "series:1396",
+        "type": "ACTED_IN"
+      },
+      {
+        "source": "person:115688",
+        "target": "series:1396",
+        "type": "ACTED_IN"
+      },
+      {
+        "source": "person:20379",
+        "target": "series:1396",
+        "type": "ACTED_IN"
+      },
+      {
+        "…": "64 more"
+      }
+    ]
+  }
+}

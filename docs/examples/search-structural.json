@@ -1,0 +1,62 @@
+{
+  "_request": "GET /api/search?q=breaking&mode=structural&limit=3",
+  "_http": 200,
+  "response": {
+    "query": "breaking",
+    "mode": "structural",
+    "results": [
+      {
+        "tmdb_id": 257159,
+        "name": "Breaking New Ground",
+        "start_year": 2024,
+        "end_year": 2024,
+        "episode_count": 6,
+        "season_count": 1,
+        "overview": "Follow Broadway performer, entrepreneur, and educator Robert Hartwell as he takes on the challenge of transfor…",
+        "poster_path": "/ffTKTBcdzBX5acnrEqMr0oDF031.jpg",
+        "vote_average": 7.5,
+        "vote_count": 2,
+        "popularity": 1.8156,
+        "score": 2.0,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 64238,
+        "name": "WWE Breaking Ground",
+        "start_year": 2015,
+        "end_year": 2016,
+        "episode_count": 11,
+        "season_count": 1,
+        "overview": "Narrated by legendary actor and voiceover artist William Shatner, Breaking Ground gives viewers access to the …",
+        "poster_path": "/iqeLMTxDhHECzrRilEZRMt6tkLy.jpg",
+        "vote_average": 7.0,
+        "vote_count": 4,
+        "popularity": 0.9077,
+        "score": 2.0,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 1396,
+        "name": "Breaking Bad",
+        "start_year": 2008,
+        "end_year": 2013,
+        "episode_count": 62,
+        "season_count": 5,
+        "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only…",
+        "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+        "vote_average": 8.952,
+        "vote_count": 18665,
+        "popularity": 227.4384,
+        "score": 2.0,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_request": "GET /api/graph/intersection?series_a=1396&series_b=60059",
+  "_http": 200,
+  "response": {
+    "series_a": 1396,
+    "series_b": 60059,
+    "intersection": [
+      {
+        "person_id": 159334,
+        "name": "Ray Campbell",
+        "role_in_a": "ACTED_IN",
+        "role_in_b": "ACTED_IN"
+      },
+      {
+        "person_id": 147085,
+        "name": "Tina Parker",
+        "role_in_a": "ACTED_IN",
+        "role_in_b": "ACTED_IN"
+      },
+      {
+        "person_id": 4808,
+        "name": "Giancarlo Esposito",
+        "role_in_a": "ACTED_IN",
+        "role_in_b": "ACTED_IN"
+      },
+      {
+        "person_id": 783,
+        "name": "Jonathan Banks",
+        "role_in_a": "ACTED_IN",
+        "role_in_b": "ACTED_IN"
+      },
+      {
+        "person_id": 59410,
+        "name": "Bob Odenkirk",
+        "role_in_a": "ACTED_IN",
+        "role_in_b": "ACTED_IN"
+      },
+      {
+        "…": "7 more"
+      }
+    ]
+  }
+}

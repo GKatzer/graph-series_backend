@@ -1,0 +1,19 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.8.2
+pydantic-settings==2.4.0
+
+# Neo4j
+neo4j==5.24.0
+
+# Qdrant (обращения к VDS2).
+# Версия клиента = версии сервера (1.9.2): клиент новее ~1.10 сериализует dense-векторы
+# по gRPC так, что сервер читает их пустыми ("expected dim: 384, got 0").
+qdrant-client==1.9.2
+
+# HTTP-клиент для внутренних вызовов
+httpx==0.27.2
+
+# Утилиты
+python-dotenv==1.0.1
+tenacity==8.5.0

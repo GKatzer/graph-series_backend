@@ -1,0 +1,61 @@
+{
+  "_request": "GET /api/graph/node/genre/18?limit=3",
+  "_http": 200,
+  "response": {
+    "nodes": [
+      {
+        "id": "genre:18",
+        "key": 18,
+        "label": "Genre",
+        "name": "Drama",
+        "properties": {
+          "total": 23928
+        }
+      },
+      {
+        "id": "series:275102",
+        "key": 275102,
+        "label": "Series",
+        "name": "The Scandal",
+        "properties": {
+          "start_year": 2026,
+          "poster_path": "/4TU0PcHBIl0wPW5B6aVRGExOnHE.jpg",
+          "vote_average": 6.3,
+          "popularity": 3427.0312
+        }
+      },
+      {
+        "id": "series:549",
+        "key": 549,
+        "label": "Series",
+        "name": "Law & Order",
+        "properties": {
+          "start_year": 1990,
+          "poster_path": "/haJ9eHytVO3H3JooMJG1DiWwDNm.jpg",
+          "vote_average": 7.282,
+          "popularity": 524.6687
+        }
+      },
+      {
+        "…": "1 more"
+      }
+    ],
+    "edges": [
+      {
+        "source": "series:275102",
+        "target": "genre:18",
+        "type": "HAS_GENRE"
+      },
+      {
+        "source": "series:549",
+        "target": "genre:18",
+        "type": "HAS_GENRE"
+      },
+      {
+        "source": "series:113962",
+        "target": "genre:18",
+        "type": "HAS_GENRE"
+      }
+    ]
+  }
+}

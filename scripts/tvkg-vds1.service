@@ -1,0 +1,39 @@
+# /etc/systemd/system/tvkg-vds1.service
+#
+# Автозапуск Docker Compose стека при загрузке VDS1.
+#
+# Установка:
+#   sudo cp scripts/tvkg-vds1.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable tvkg-vds1
+#   sudo systemctl start tvkg-vds1
+
+[Unit]
+Description=TV Series Knowledge Graph — VDS1 (Neo4j + FastAPI + Caddy)
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home/graph_series_backend
+
+# Запуск
+ExecStart=/usr/bin/docker compose up -d --remove-orphans
+
+# Остановка (даём 60 сек на graceful shutdown Neo4j)
+ExecStop=/usr/bin/docker compose down --timeout 60
+
+# Перезапуск при сбое
+Restart=on-failure
+RestartSec=10s
+
+# Переменные окружения (docker compose читает .env сам,
+# но systemd должен знать рабочую директорию)
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=tvkg-vds1
+
+[Install]
+WantedBy=multi-user.target

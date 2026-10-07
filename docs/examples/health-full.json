@@ -1,0 +1,9 @@
+{
+  "_request": "GET /health/full",
+  "_http": 200,
+  "response": {
+    "status": "ok",
+    "neo4j": "up",
+    "qdrant": "up"
+  }
+}

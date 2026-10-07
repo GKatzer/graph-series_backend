@@ -1,0 +1,83 @@
+services:
+
+  # ─────────────────────────────────────────────
+  # Neo4j Community 5
+  # ─────────────────────────────────────────────
+  neo4j:
+    image: neo4j:5-community
+    container_name: neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD}"
+      # Память — под 4 GB RAM на VDS
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1g
+      NEO4J_server_memory_pagecache_size: 512m
+      # APOC
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*"
+      NEO4J_dbms_security_procedures_allowlist: "apoc.*"
+      # Принимаем соединения только от fastapi (внутри сети Docker)
+      # Bolt на 0.0.0.0 — но порт наружу НЕ публикуется
+      NEO4J_server_bolt_listen__address: 0.0.0.0:7687
+      NEO4J_server_http_listen__address: 0.0.0.0:7474
+      # Отключаем browser в prod, чтобы освободить ресурсы
+      NEO4J_server_http_enabled: "true"
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
+      - ./neo4j/import:/import
+      - ./neo4j/plugins:/plugins
+      - ./neo4j/conf/neo4j.conf:/conf/neo4j.conf:ro
+    # Bolt и HTTP не торчат наружу — только внутри Docker-сети
+    expose:
+      - "7687"
+      - "7474"
+    ports:
+      - "${PRIVATE_BIND_IP:?set PRIVATE_BIND_IP in .env}:7687:7687"
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${NEO4J_AUTH#neo4j/}\" 'RETURN 1'"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # ─────────────────────────────────────────────
+  # FastAPI backend
+  # ─────────────────────────────────────────────
+  fastapi:
+    build:
+      context: ./fastapi
+      dockerfile: Dockerfile
+    container_name: fastapi
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: "${NEO4J_USER}"
+      NEO4J_PASSWORD: "${NEO4J_PASSWORD}"
+      QDRANT_HOST: "${QDRANT_TAILSCALE_HOST}"
+      QDRANT_GRPC_PORT: "6334"   # Qdrant 1.9.2 на VDS2: только gRPC, REST не торчит
+      APP_ENV: production
+    ports:
+      - "127.0.0.1:8000:8000"
+      - "${PRIVATE_BIND_IP:?set PRIVATE_BIND_IP in .env}:8000:8000"
+    expose:
+      - "8000"
+    networks:
+      - internal
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+networks:
+  internal:
+    driver: bridge

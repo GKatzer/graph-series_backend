@@ -1,0 +1,8 @@
+{
+  "_request": "GET /health",
+  "_http": 200,
+  "response": {
+    "status": "ok",
+    "uptime_s": 1146486
+  }
+}

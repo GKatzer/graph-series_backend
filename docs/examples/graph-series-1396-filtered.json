@@ -1,0 +1,58 @@
+{
+  "_request": "GET /api/graph/series/1396?depth=1&include_types=HAS_GENRE,PRODUCED_IN",
+  "_http": 200,
+  "response": {
+    "nodes": [
+      {
+        "id": "series:1396",
+        "key": 1396,
+        "label": "Series",
+        "name": "Breaking Bad",
+        "properties": {
+          "start_year": 2008,
+          "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+          "vote_average": 8.952,
+          "popularity": 227.4384
+        }
+      },
+      {
+        "id": "genre:80",
+        "key": 80,
+        "label": "Genre",
+        "name": "Crime",
+        "properties": {}
+      },
+      {
+        "id": "genre:18",
+        "key": 18,
+        "label": "Genre",
+        "name": "Drama",
+        "properties": {}
+      },
+      {
+        "id": "country:US",
+        "key": "US",
+        "label": "Country",
+        "name": "US",
+        "properties": {}
+      }
+    ],
+    "edges": [
+      {
+        "source": "series:1396",
+        "target": "genre:80",
+        "type": "HAS_GENRE"
+      },
+      {
+        "source": "series:1396",
+        "target": "genre:18",
+        "type": "HAS_GENRE"
+      },
+      {
+        "source": "series:1396",
+        "target": "country:US",
+        "type": "PRODUCED_IN"
+      }
+    ]
+  }
+}

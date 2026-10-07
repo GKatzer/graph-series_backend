@@ -1,0 +1,82 @@
+{
+  "_request": "GET /api/series/1396/similar?mode=hybrid",
+  "_http": 200,
+  "response": {
+    "query": "1396",
+    "mode": "hybrid",
+    "results": [
+      {
+        "tmdb_id": 72812,
+        "name": "Metástasis",
+        "start_year": 2014,
+        "end_year": 2014,
+        "episode_count": 62,
+        "season_count": 5,
+        "overview": "A Colombian remake of the U.S. TV show Breaking Bad. After he is diagnosed with cancer, Walter Blanco teams up…",
+        "poster_path": "/pZh2WhyOwvqmfLHs9U6sxfSJTNB.jpg",
+        "vote_average": 7.0,
+        "vote_count": 99,
+        "popularity": 8.3992,
+        "score": 1.020758819580078,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 120095,
+        "name": "The White Line",
+        "start_year": 2012,
+        "end_year": 2012,
+        "episode_count": 92,
+        "season_count": 1,
+        "overview": "A raw and realistic story that connects four characters whose lives are affected by the dark world of drug tra…",
+        "poster_path": "/k0kl61rfAEV6SmPYjOwwCaproeV.jpg",
+        "vote_average": 7.543,
+        "vote_count": 35,
+        "popularity": 4.251,
+        "score": 0.8991348266601562,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 231003,
+        "name": "Lazarus",
+        "start_year": 2025,
+        "end_year": 2025,
+        "episode_count": 13,
+        "season_count": 1,
+        "overview": "In 2052, a Nobel Prize-winning neuroscientist develops a drug called Hapna — a cure-all that has the unexpecte…",
+        "poster_path": "/8ViqUWPWh6aPZGQA57FMRVmaXZ1.jpg",
+        "vote_average": 7.485,
+        "vote_count": 137,
+        "popularity": 24.9204,
+        "score": 0.8795845031738281,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "tmdb_id": 244244,
+        "name": "Run Away",
+        "start_year": 2026,
+        "end_year": 2026,
+        "episode_count": 8,
+        "season_count": 1,
+        "overview": "A desperate father searching for his runaway daughter gets caught up in a murder case — and stumbles upon secr…",
+        "poster_path": "/frKxKytEHIA2vXg4RAz14Sc0UmS.jpg",
+        "vote_average": 6.678,
+        "vote_count": 166,
+        "popularity": 8.4797,
+        "score": 0.8687583923339843,
+        "shared_actors": null,
+        "shared_countries": null,
+        "source": "vector"
+      },
+      {
+        "…": "16 more"
+      }
+    ],
+    "total": 20
+  }
+}

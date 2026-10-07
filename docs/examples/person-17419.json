@@ -1,0 +1,31 @@
+{
+  "_request": "GET /api/person/17419",
+  "_http": 200,
+  "response": {
+    "person_id": 17419,
+    "name": "Bryan Cranston",
+    "series": [
+      {
+        "tmdb_id": 279471,
+        "name": "Malcolm in the Middle: Life's Still Unfair",
+        "start_year": 2026,
+        "role": "ACTED_IN"
+      },
+      {
+        "tmdb_id": 247767,
+        "name": "The Studio",
+        "start_year": 2025,
+        "role": "ACTED_IN"
+      },
+      {
+        "tmdb_id": 86430,
+        "name": "Your Honor",
+        "start_year": 2020,
+        "role": "DIRECTED"
+      },
+      {
+        "…": "19 more"
+      }
+    ]
+  }
+}

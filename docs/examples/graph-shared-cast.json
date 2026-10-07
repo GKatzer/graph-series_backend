@@ -1,0 +1,27 @@
+{
+  "_request": "GET /api/graph/series/1396/shared-cast?limit=3",
+  "_http": 200,
+  "response": {
+    "source": 1396,
+    "results": [
+      {
+        "tmdb_id": 60059,
+        "name": "Better Call Saul",
+        "start_year": 2015,
+        "shared_actors": 5
+      },
+      {
+        "tmdb_id": 90746,
+        "name": "Better Call Saul Employee Training",
+        "start_year": 2017,
+        "shared_actors": 3
+      },
+      {
+        "tmdb_id": 64902,
+        "name": "Talking Bad",
+        "start_year": 2013,
+        "shared_actors": 3
+      }
+    ]
+  }
+}

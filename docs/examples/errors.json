@@ -1,0 +1,60 @@
+[
+  {
+    "request": "GET /api/series/99999999",
+    "http": 404,
+    "body": {
+      "detail": "Series 99999999 not found"
+    }
+  },
+  {
+    "request": "GET /api/series/abc",
+    "http": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "int_parsing",
+          "loc": [
+            "path",
+            "tmdb_id"
+          ],
+          "msg": "Input should be a valid integer, unable to parse string as an integer",
+          "input": "abc"
+        }
+      ]
+    }
+  },
+  {
+    "request": "GET /api/graph/node/work/1",
+    "http": 400,
+    "body": {
+      "detail": "Неизвестный тип узла: 'work'. Допустимые: ['country', 'genre', 'keyword', 'language', 'network']"
+    }
+  },
+  {
+    "request": "GET /api/graph/node/genre/abc",
+    "http": 422,
+    "body": {
+      "detail": "Genre key должен быть целым числом, получено 'abc'"
+    }
+  },
+  {
+    "request": "GET /api/search?q=a",
+    "http": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "query",
+            "q"
+          ],
+          "msg": "String should have at least 2 characters",
+          "input": "a",
+          "ctx": {
+            "min_length": 2
+          }
+        }
+      ]
+    }
+  }
+]

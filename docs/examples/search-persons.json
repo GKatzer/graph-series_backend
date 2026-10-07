@@ -1,0 +1,28 @@
+{
+  "_request": "GET /api/search/persons?q=cranston&limit=3",
+  "_http": 200,
+  "response": {
+    "query": "cranston",
+    "results": [
+      {
+        "person_id": 17419,
+        "name": "Bryan Cranston",
+        "score": 1.0,
+        "series_count": 17
+      },
+      {
+        "person_id": 218365,
+        "name": "Joe Cranston",
+        "score": 1.0,
+        "series_count": 1
+      },
+      {
+        "person_id": 1514101,
+        "name": "Cranston Johnson",
+        "score": 1.0,
+        "series_count": 2
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_request": "GET /api/person/17419/graph",
+  "_http": 200,
+  "response": {
+    "nodes": [
+      {
+        "id": "person:17419",
+        "key": 17419,
+        "label": "Person",
+        "name": "Bryan Cranston",
+        "properties": {}
+      },
+      {
+        "id": "series:220",
+        "key": 220,
+        "label": "Series",
+        "name": "Big Day",
+        "properties": {
+          "start_year": 2006,
+          "poster_path": "/35FmsYvgORNeomdRLigRJdcpF6N.jpg",
+          "vote_average": 5.7,
+          "popularity": 5.0677
+        }
+      },
+      {
+        "id": "person:152076",
+        "key": 152076,
+        "label": "Person",
+        "name": "Sarah Pia Anderson",
+        "properties": {}
+      },
+      {
+        "…": "89 more"
+      }
+    ],
+    "edges": [
+      {
+        "source": "person:17419",
+        "target": "series:220",
+        "type": "DIRECTED"
+      },
+      {
+        "source": "person:152076",
+        "target": "series:220",
+        "type": "DIRECTED"
+      },
+      {
+        "source": "person:65506",
+        "target": "series:220",
+        "type": "DIRECTED"
+      },
+      {
+        "…": "125 more"
+      }
+    ]
+  }
+}

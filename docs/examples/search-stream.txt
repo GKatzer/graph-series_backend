@@ -1,0 +1,10 @@
+# GET /api/search/stream?q=space%20western&limit=2
+# HTTP 200
+data: {"type": "meta", "total": 2}
+
+data: {"type": "result", "data": {"tmdb_id": 30991, "name": "Cowboy Bebop", "start_year": 1998, "end_year": 1999, "episode_count": 26, "season_count": 1, "overview": "In 2071, roughly fifty years afte
+
+data: {"type": "result", "data": {"tmdb_id": 82856, "name": "The Mandalorian", "start_year": 2019, "end_year": 2023, "episode_count": 24, "season_count": 3, "overview": "After the fall of the Galactic
+
+data: {"type": "done", "total": 2}
+

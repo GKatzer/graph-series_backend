@@ -1,0 +1,23 @@
+{
+  "nodes": 66,
+  "edges": 67,
+  "by_label": {
+    "Country": 1,
+    "Genre": 2,
+    "Keyword": 29,
+    "Language": 3,
+    "Network": 1,
+    "Person": 29,
+    "Series": 1
+  },
+  "by_edge_type": {
+    "ACTED_IN": 20,
+    "AIRED_ON": 1,
+    "CREATED": 1,
+    "DIRECTED": 10,
+    "HAS_GENRE": 2,
+    "HAS_KEYWORD": 29,
+    "HAS_LANGUAGE": 3,
+    "PRODUCED_IN": 1
+  }
+}

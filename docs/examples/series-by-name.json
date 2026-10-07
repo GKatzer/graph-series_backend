@@ -1,0 +1,25 @@
+{
+  "_request": "GET /api/series?name=breaking%20ba&limit=2",
+  "_http": 200,
+  "response": {
+    "query": "breaking ba",
+    "results": [
+      {
+        "tmdb_id": 1396,
+        "name": "Breaking Bad",
+        "start_year": 2008,
+        "end_year": 2013,
+        "poster_path": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+        "score": 10.300247192382812
+      },
+      {
+        "tmdb_id": 80106,
+        "name": "Breaking the Band",
+        "start_year": 2018,
+        "end_year": 2022,
+        "poster_path": "/g85G6qvMkfa6m7x0Uf4XOTRdyhH.jpg",
+        "score": 9.207155227661133
+      }
+    ]
+  }
+}

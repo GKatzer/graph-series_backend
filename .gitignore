@@ -1,0 +1,24 @@
+# Секреты — никогда не коммитим
+.env
+
+# Neo4j данные (тяжёлые, не в репо)
+neo4j/data/
+neo4j/logs/
+neo4j/import/backup.dump
+
+# Caddy автосертификаты
+caddy/data/
+
+# Python
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Docker
+*.log
+
+# Neo4j plugins are downloaded by the image (NEO4J_PLUGINS in docker-compose.yml)
+neo4j/plugins/*.jar
+.coverage

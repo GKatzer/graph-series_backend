@@ -1,0 +1,55 @@
+name: CI — VDS1 Backend
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "fastapi/**"
+      - ".github/workflows/ci-vds1.yml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "fastapi/**"
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    env:
+      NEO4J_PASSWORD: ci
+      QDRANT_HOST: localhost
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        working-directory: fastapi
+        run: pip install -r requirements.txt ruff mypy pytest pytest-asyncio
+
+      - name: Ruff lint
+        working-directory: fastapi
+        run: ruff check app/
+
+      - name: Mypy type check
+        working-directory: fastapi
+        run: mypy app/ --ignore-missing-imports
+
+      - name: Pytest
+        working-directory: fastapi
+        run: pytest tests/ -v
+
+  deploy:
+    needs: lint-and-test
+    runs-on: self-hosted   # self-hosted runner на VDS1
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy FastAPI
+        run: bash /home/graph_series_backend/scripts/deploy.sh ${{ github.sha }}
